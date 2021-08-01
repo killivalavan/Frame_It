@@ -64,8 +64,8 @@ const StyledCard = styled.div`
    }
    @media screen and (max-width: 680px){
         .image{
-            height: 10rem;
-            width: 10rem;
+            height: 11rem;
+            width: 11rem;
             object-fit: cover;
         }
    }
