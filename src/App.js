@@ -80,9 +80,9 @@ const StyledSearch = styled.div`
       
     form{   
         position: fixed;
-        bottom: 5%;
+        bottom: 8%;
         left: 50%;
-        transform: translate(-50%, -5%);
+        transform: translate(-50%, -8%);
         z-index: 1;
     }
     input{
