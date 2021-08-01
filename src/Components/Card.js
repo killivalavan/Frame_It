@@ -66,8 +66,8 @@ const StyledCard = styled.div`
    }
    @media screen and (max-width: 680px){
         .image{
-            height: 11rem;
-            width: 11rem;
+            height: 12rem;
+            width: 12rem;
             object-fit: cover;
         }
         .skeleton{
@@ -145,7 +145,7 @@ const Modal = styled.div`
     .modal-bg .modal{
         height: 30%;
         img{
-            padding: .5rem .3rem;
+            padding: .5rem .2rem;
 
         }
     }
