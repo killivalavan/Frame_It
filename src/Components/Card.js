@@ -128,7 +128,6 @@ const Modal = styled.div`
         height: 65%;
         img{
             padding: 1rem;
-
         }
     }
 }
