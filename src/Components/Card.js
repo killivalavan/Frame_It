@@ -146,7 +146,7 @@ const Modal = styled.div`
     .modal-bg .modal{
         height: 30%;
         img{
-            padding: .5rem;
+            padding: .5rem .3rem;
 
         }
     }
