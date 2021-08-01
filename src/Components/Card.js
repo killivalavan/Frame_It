@@ -32,7 +32,7 @@ const Card = ({ image }) => {
         <StyledCard>
            {!loading ? 
             <img className="image" onClick={onclickHandler} src={image.urls.regular} alt="" /> :
-            <Skeleton className="skeleton" variant="rect" annimation="wave" width={310} height={190} />}
+            <Skeleton className="skeleton" variant="rect" annimation="wave"  />}
             
             <Modal>
                 <div onClick={closeHandler} ref={closeRef} className={`modal-bg ${modal ? "active" : "" }`}>
@@ -59,8 +59,10 @@ const StyledCard = styled.div`
        }
    }
    .skeleton{
-       margin: .2rem;
-       border-radius: 2px;
+        margin: .2rem;
+        border-radius: 2px;
+        width: 30rem;
+        height: 20rem;
    }
    @media screen and (max-width: 680px){
         .image{
@@ -68,6 +70,12 @@ const StyledCard = styled.div`
             width: 11rem;
             object-fit: cover;
         }
+        .skeleton{
+            margin: .2rem;
+            border-radius: 2px;
+            width: 11rem;
+            height: 11rem;
+   }
    }
 `;
 
