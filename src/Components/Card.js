@@ -136,9 +136,9 @@ const Modal = styled.div`
 
 @media screen and (max-width: 680px){
     .modal-bg .modal{
-        height: 25%;
+        height: 30%;
         img{
-            padding: 1rem;
+            padding: .5rem;
 
         }
     }
