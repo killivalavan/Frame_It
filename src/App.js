@@ -117,7 +117,7 @@ const Alert = styled.div`
   align-items: center;
   font-size: 3rem;
   @media screen and (max-width: 680px){
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 `;
 
