@@ -116,7 +116,7 @@ const Modal = styled.div`
             }
         }
         img{
-            height: 110%;
+            height: 100%;
             object-fit: contain;
             background: white;
             padding: 2rem;
