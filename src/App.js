@@ -10,6 +10,7 @@ function App() {
   const [update, setUpdate] = useState("");
   const [search, setSearch] = useState("culture");
   const [pageNumber , setPageNumber] = useState(1);
+  const [alert, setAlert] = useState("");
 
   const inputRef = useRef();
 
@@ -17,6 +18,9 @@ function App() {
     getImages();
   }, [search, pageNumber])
 
+  console.log(images);
+ 
+  
 //Infinity Scroll
 
 // useEffect(() => {
@@ -56,8 +60,9 @@ function App() {
   const onSubmitHandler = (e) =>{
     e.preventDefault();
 
-    setPageNumber(1);
     setSearch(update);
+    setPageNumber(1);
+    // setSearch(update);
     clearHandler();
   }
 
@@ -66,6 +71,7 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <StyledSearch>
+        {images.length === 0 && <Alert>No Images Found</Alert>}
           <form onSubmit={onSubmitHandler}>
               <input ref={inputRef} onChange={onchangeHandler} type="text" placeholder="Search here..." />
           </form>
@@ -102,6 +108,17 @@ const StyledSearch = styled.div`
         font-size: 1.5rem;
       }
     }
+`;
+
+const Alert = styled.div`
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  @media screen and (max-width: 680px){
+    font-size: 1.5rem;
+  }
 `;
 
 export default App;

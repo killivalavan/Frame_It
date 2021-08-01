@@ -16,14 +16,14 @@ const Gallery = ({ images, setPageNumber }) => {
     return (
         <StyledGallery>
             {images.map((image)=> <Card key={image.id} image={image} /> )}
-            <StyledButtons>
+            {!images === 0 && <StyledButtons>
                 <button onClick={PrevPage} name="Prev Page" className="prevPage">
                     <FontAwesomeIcon className="icon" size="3x" icon={faChevronLeft} />
                 </button>
                 <button onClick={NextPage} name="Next Page" className="nextPage">
                     <FontAwesomeIcon className="icon" size="3x" icon={faChevronRight} />
                 </button>
-            </StyledButtons>
+            </StyledButtons>}
         </StyledGallery>
     )
 };
