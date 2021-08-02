@@ -4,7 +4,6 @@ import Skeleton from '@material-ui/lab/Skeleton';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
-
 const Card = ({ image }) => {
 
     const [loading, setLoading] = useState(true);
@@ -33,7 +32,6 @@ const Card = ({ image }) => {
            {!loading ? 
             <img className="image" onClick={onclickHandler} src={image.urls.regular} alt="" /> :
             <Skeleton className="skeleton" variant="rect" annimation="wave"  />}
-            
             <Modal>
                 <div onClick={closeHandler} ref={closeRef} className={`modal-bg ${modal ? "active" : "" }`}>
                     <div className="modal">
@@ -51,6 +49,7 @@ const StyledCard = styled.div`
     overflow: hidden;
     margin: .3rem;
    .image{
+       display: block;
        height: 20rem;
        transition: all .4s ease;
        &:hover{
@@ -104,8 +103,6 @@ const Modal = styled.div`
             position: absolute;
             bottom: 99%;
             left: 105%;
-            //right: 10%;
-            //transform: translate(-105%, -99%);
             opacity: 1;
             color: rgba(255,255,255,.5);
             transition: color .5s ease;
@@ -146,7 +143,6 @@ const Modal = styled.div`
         height: 30%;
         img{
             padding: .5rem .2rem;
-
         }
     }
 }

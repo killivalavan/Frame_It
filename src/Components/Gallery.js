@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
 
-const Gallery = ({ images, setPageNumber }) => {
+const Gallery = ({ images, setPageNumber, isLoading }) => {
 
     const NextPage = () =>{
         setPageNumber(currentPage => currentPage + 1);
@@ -13,17 +13,18 @@ const Gallery = ({ images, setPageNumber }) => {
         setPageNumber(currentPage => currentPage - 1)
     }  
     
+
     return (
         <StyledGallery>
             {images.map((image)=> <Card key={image.id} image={image} /> )}
-            {!images === 0 && <StyledButtons>
+            <StyledButtons>
                 <button onClick={PrevPage} name="Prev Page" className="prevPage">
                     <FontAwesomeIcon className="icon" size="3x" icon={faChevronLeft} />
                 </button>
                 <button onClick={NextPage} name="Next Page" className="nextPage">
                     <FontAwesomeIcon className="icon" size="3x" icon={faChevronRight} />
                 </button>
-            </StyledButtons>}
+            </StyledButtons>
         </StyledGallery>
     )
 };
@@ -61,7 +62,6 @@ const StyledButtons = styled.div `
         border: none;
         color: rgba(0, 0, 0, 0.3);
         border-radius: 50%;
-        transition: transform .5s ease;
         &:hover{
             transform: scale(1.5);
             color: rgba(0, 0, 0, 0.6);
