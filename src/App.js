@@ -108,6 +108,8 @@ const StyledSearch = styled.div`
 
 const Alert = styled.div`
   min-height: 100vh;
+  width: 100%;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
